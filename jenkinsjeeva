@@ -19,7 +19,7 @@ stage('Build'){
 sh "${mavenHome}/bin/mvn clean package"
 }
 stage('Triggerdownstreamjob'){
-sh "build job: Pipeline pipelinescripted1"
+ build job: 'Pipeline pipelinescripted1'
 }
 
   
