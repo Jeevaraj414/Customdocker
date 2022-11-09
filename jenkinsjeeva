@@ -18,6 +18,9 @@ git  branch : 'master' , credentialsId: 'a383f70e-e564-4bef-bc90-1bb0e24bc8c5', 
 stage('Build'){
 sh "${mavenHome}/bin/mvn clean package"
 }
+stage('Triggerdownstreamjob'){
+sh "build job: Pipeline pipelinescripted1"
+}
 
   
 stage('ExecuteSonarQubeReport'){
